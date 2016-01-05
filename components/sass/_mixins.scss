@@ -1,0 +1,28 @@
+@mixin MQ($canvas) {
+  @if $canvas == xS {
+   @media only screen and (min-width: $xS) { @content; } 
+  }
+  @else if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == i5 {
+   @media only screen and (min-width: $i5) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+  @else if $canvas == maxL {
+   @media only screen and (max-width: $maxL) { @content; } 
+  }
+}
+
+// Jeet Edit Mode
+@mixin edit() {
+  * {
+    background: rgba(0, 0, 0, .05);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#10000000, endColorstr=#10000000);
+  }
+}

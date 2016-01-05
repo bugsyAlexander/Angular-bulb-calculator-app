@@ -1,0 +1,89 @@
+// @include edit();
+
+#calc-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+
+  main {
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-3;
+    box-shadow: 0 0.625rem 3.125rem rgba($color-3, 0.19), 0 0.375rem 3.125rem rgba($color-3, 0.23);
+  } // main
+
+  section {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 18.75rem;
+    padding-top: 6.875rem;
+    color: $color-1;
+    background-repeat: no-repeat;
+    background-position: center 1rem;
+    background-size: 3.9375rem 6.25rem;
+  } // section
+} // #calc-container
+
+#calc-container main section div {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  background-color: rgba($color-2, 0.15);
+  margin-top: 2rem;
+  min-height: 9.125rem;
+}
+
+#calc-container main h4 {
+  font-size: 0.98rem;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+#calc-container main p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+
+  + p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0;
+    padding-bottom: 0.125rem;
+
+    &::before {
+      content: '$';
+    }
+
+    &::after {
+      content: ' per year';
+      font-size: 0.75rem;
+    }
+  } // + p
+}
+
+// SVGs
+#calc-container main section.inc {
+  background-color: $color-6;
+  background-image: url(../images/bulb_inc.svg);
+}
+
+#calc-container main section.hal {
+  background-color: $color-5;
+  background-image: url(../images/bulb_hal.svg);
+}
+
+#calc-container main section.cfl {
+  background-color: $color-7;
+  background-image: url(../images/bulb_cfl.svg);
+}
+
+#calc-container main section.led {
+  background-color: $color-4;
+  background-image: url(../images/bulb_led.svg);
+}

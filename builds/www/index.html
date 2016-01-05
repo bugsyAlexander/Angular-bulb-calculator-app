@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calcApp">
+  <head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Angular Light Bulb Calculator App</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="http://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans:400,700" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/main.css">
+
+  <!-- Angular
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.angularjs.org/1.4.8/angular.min.js"></script>
+
+</head>
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="calc-container" ng-controller="calcCntrl">
+    <main>
+      <section class="inc">
+        <div>
+          <h4>Incandescent</h4>
+          <p>{{incWattage + 'w'}}</p>
+          <p>{{incCost}}</p>
+        </div>
+      </section>
+
+      <section class="hal">
+        <div>
+          <h4>Halogen</h4>
+          <p>{{halWattage + 'w'}}</p>
+          <p>{{halCost}}</p>
+        </div>
+      </section>
+
+      <section class="cfl">
+        <div>
+          <h4>CFL</h4>
+          <p>{{cflWattage + 'w'}}</p>
+          <p>{{cflCost}}</p>
+        </div>
+      </section>
+
+      <section class="led">
+        <div>
+          <h4>LED</h4>
+          <p>{{ledWattage + 'w'}}</p>
+          <p>{{ledCost}}</p>
+        </div>
+      </section>
+    </main>
+
+    <form>
+      <div>
+        <h4>Lumens</h4>
+        <p>Brightness <br>of bulb</p>
+        <select ng-change="calculate()" ng-model="currentLumens" ng-options="opt as opt for opt in lumenOptions">
+        </select>
+      </div>
+
+      <div>
+        <h4>kWh</h4>
+        <p>Kilowatt-<br>hour cost</p>
+        <input type="number" ng-change="calculate()" ng-model="currentCost" value="{{currentCost}}"> cents
+      </div>
+
+      <div>
+        <h4>Hours</h4>
+        <p>Usage <br>per day</p>
+        <input type="number" ng-change="calculate()" ng-model="currentHours" value="{{currentHours}}">
+      </div>
+    </form>
+  </div>  <!-- end calc-container -->
+
+
+  <!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
