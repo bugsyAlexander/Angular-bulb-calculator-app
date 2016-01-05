@@ -1,3 +1,5 @@
-# Web app workflow 
+# Light Bulb Calculator App
 
-#### Basic grunt settup
+#### Angular 1.8 Bulb Calculator App
+
+![ng-bulb](/builds/www/images/angular-bulb-calc-app.png)
