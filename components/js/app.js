@@ -28,6 +28,8 @@
       // calc price per year
       if ($scope.currentHours > 24) {
         $scope.currentHours = 24;
+      } else if ($scope.currentHours < 0) {
+        $scope.currentHours = 1;
       }
 
       var totalHours = $scope.totalDays * $scope.currentHours;
