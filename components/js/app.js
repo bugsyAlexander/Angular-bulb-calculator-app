@@ -29,7 +29,11 @@
       if ($scope.currentHours > 24) {
         $scope.currentHours = 24;
       } else if ($scope.currentHours < 0) {
-        $scope.currentHours = 1;
+        $scope.currentHours = 0;
+      }
+
+      if ($scope.currentCost < 0) {
+        $scope.currentCost = 0;
       }
 
       var totalHours = $scope.totalDays * $scope.currentHours;
