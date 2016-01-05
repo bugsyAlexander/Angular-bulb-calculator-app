@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bugsyAlexander/web-workflow"
+    "url": "http://bugsyalexander.github.io/Angular-bulb-calculator-app/"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
